@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.google.code.gson:gson:2.8.5")
     implementation("com.github.s1monw1:openfaas-kotlin-model:1.0.0")
     implementation(kotlin("stdlib-jdk8"))
 

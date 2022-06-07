@@ -39,6 +39,9 @@ class InvokeHandler(private val handler: IHandler) : HttpHandler {
         }
         response.headers.forEach(responseHeaders::add)
         val bytesOut = response.body?.toByteArray(Charset.forName("UTF-8"))
+
+        // val contentBody
+
         val responseLength = bytesOut?.size?.toLong() ?: 0L
         exchange.sendResponseHeaders(response.statusCode, responseLength)
         bytesOut?.let {
